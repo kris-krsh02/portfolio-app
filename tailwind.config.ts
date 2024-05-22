@@ -5,15 +5,23 @@ const config: Config = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    './node_modules/preline/preline.js',
   ],
   theme: {
-    extend: {
-      fontFamily: {
-        'accent': ['var(--font-accent)', 'cursive'],
-        'primary': ['var(--font-primary)', 'sans-serif'],
-    },
+    colors: {
+        beige: "#C9BFAE",
+        black: "#282828",
+        purple: "#AC77B0",
+      },
+    fontFamily: {
+      'accent': ['var(--font-accent)', 'cursive'],
+      'primary': ['var(--font-primary)', 'sans-serif'],
   },
-  plugins: [],
+    extend: { 
+  },
+  plugins: [
+    require('preline/plugin'),
+  ],
   }
 };
 

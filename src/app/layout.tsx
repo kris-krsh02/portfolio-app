@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Knewave, Magra } from "next/font/google";
+import PrelineScript from "./components/PrelineScript";
 import "./globals.css";
 
 const knewave = Knewave({
@@ -30,6 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${magra.variable} ${knewave.variable}`}>
       <body >{children}</body>
+      <PrelineScript />
     </html>
   );
 }
